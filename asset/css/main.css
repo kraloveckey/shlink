@@ -1,0 +1,191 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Important for controlling the size of elements */
+}
+html, body, input, text, textarea {
+    outline: none;
+    font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+    font-size: 12px;
+}
+html, body {
+    background: #fff;
+}
+a {
+    text-decoration: none; /* In general, remove the underline for all links */
+}
+a:hover {
+    text-decoration: none; /* Guarantee no underlining when hovering */
+}
+
+/* Main Layout */
+.wrap {
+    text-align: center;
+    overflow: hidden;
+}
+.wrap .meta {
+    margin: 160px 0 0 0;
+    opacity: 0;
+    transform: translateY(-150px);
+    transition: .5s all ease;
+}
+.on .wrap .meta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Styles for the main title button --- */
+.main-title-button {
+    display: inline-flex; /* Flexbox for icon and text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center the content horizontally */
+    gap: 10px; /* Indentation between logo and text */
+    padding: 10px 25px; /* Internal button indents */
+    margin: 0; /* Remove the margins that may be in h2 */
+    background-color: #6da668; /* The green color from the original .title */
+    color: white; /* Text colour */
+    border: none;
+    border-radius: 5px;
+    cursor: default; /* Default cursor (not "hand") */
+    font-size: 42px; /* Font size as in the original .title */
+    font-weight: bold; /* Keep the bold text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow */
+
+    /* Remove all transition, hover, active effects for static */
+    transition: none !important;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+/* Guarantee that there are no changes when hovering/activating the main button */
+.main-title-button:hover,
+.main-title-button:active,
+.main-title-button:focus,
+.main-title-button:visited {
+    background-color: #6da668 !important;
+    color: white !important;
+    text-decoration: none !important;
+    transform: none !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+    outline: none !important;
+}
+
+/* Styles for the logo inside the main button */
+.main-title-button .title-logo {
+    height: 1em;
+    width: auto;
+    flex-shrink: 0;
+    /* Important: make the logo as white as the text */
+    filter: brightness(0) invert(1);
+}
+
+/* Styles for the title text inside the button */
+.main-title-button .title-text {
+    margin: 0;
+    padding: 0;
+    color: inherit; /* Inherit the color from the parent (main-title-button) */
+    font-size: inherit; /* Inherit font size from parent font size */
+    line-height: 1em; /* Ensure correct line height */
+    text-transform: none;
+    text-decoration: none !important;
+}
+
+/* Description under the title */
+.wrap .meta .description {
+    margin: 10px 0 0 0;
+    line-height: 1em;
+    color: #7e7e7e;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Animation for link-area */
+.wrap .link-area {
+    margin: 50px 0 0 0;
+    opacity: 0;
+    transition: .5s opacity ease;
+}
+.on .wrap .link-area {
+    opacity: 1;
+}
+
+/* --- Styles for input fields (#url, #shorturl) --- */
+.wrap .link-area #url,
+.wrap .link-area #shorturl {
+    width: 320px;
+    height: 38px; /* Make the height the same as the buttons */
+    line-height: 38px;
+    padding: 0 10px;
+    border: 3px solid #bdc3c7;
+    border-radius: 5px;
+    color: #333;
+    font-size: 12px;
+    box-shadow: none;
+    vertical-align: middle;
+}
+.wrap .link-area #url.focus,
+.wrap .link-area #url:focus {
+    border-color: #6da668;
+    transition: .2s border ease;
+}
+
+/* --- Styles for the Submit and Copy buttons (#submit, #shorturlcopy) --- */
+.wrap .link-area #shorturlcopy,
+.wrap .link-area #submit {
+    width: 90px;
+    height: 38px;
+    margin: 0 0 0 5px;
+    background: #6da668;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    cursor: default;
+    font-size: 12px;
+    font-weight: bold;
+    /* Add a small shadow for a volumizing effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Soft shadow */
+
+    /* Remove all transition, hover, active effects for static */
+    transition: none !important;
+    opacity: 1 !important; /* Guarantee that opacity does not change */
+    text-decoration: none !important;
+    outline: none !important;
+    /* Important for aligning icons and text */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Small indentation between icon and text */
+}
+
+/* Guarantee that there are no hover/activation changes for the Submit/Copy buttons */
+.wrap .link-area #submit:hover,
+.wrap .link-area #submit:active,
+.wrap .link-area #submit:focus,
+.wrap .link-area #shorturlcopy:hover,
+.wrap .link-area #shorturlcopy:active,
+.wrap .link-area #shorturlcopy:focus {
+    background: #6da668 !important;
+    color: #fff !important;
+    transform: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+    opacity: 1 !important;
+    outline: none !important;
+}
+
+
+/* Footer */
+.wrap .footer {
+    width: 100%;
+    bottom: 80px;
+    left: 0;
+    position: absolute;
+    color: #7e7e7e;
+}
+.wrap .footer a {
+    color:#6da668;
+    text-decoration: underline; /* Restore underlining for links in the footer */
+}
+.wrap .footer a:hover {
+    text-decoration: none; /* Remove the underline when hovering over a liner */
+}
