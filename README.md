@@ -1,7 +1,5 @@
 # shlink
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kraloveckey)
-
 ## Overview
 
 The definitive self-hosted, simple and fast URL shortener. This tool allows to shorten long links from any websites.
@@ -59,3 +57,9 @@ mysql> exit
 
 ### Example
 ![example](./.assets/shlink.png)
+
+---
+
+<a href="https://www.paypal.com/donate/?hosted_button_id=GWWLEXEF3XL92">
+  <img src="https://raw.githubusercontent.com/kraloveckey/kraloveckey/refs/heads/main/.assets/paypal-donate-button.png" alt="Donate with PayPal" width="225" height="100"/>
+</a>
